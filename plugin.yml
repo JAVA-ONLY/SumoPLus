@@ -1,0 +1,33 @@
+name: SumoPlus
+main: me.su.sumoplus
+version: 1.0
+description: A simple Sumo minigame plugin for Minecraft.
+
+commands:
+  sumo:
+    description: Main command for the Sumo minigame.
+    usage: '/sumo <subcommand>'
+    aliases: []
+    permission: sumo.use
+    permission-message: You do not have permission to use this command.
+    subcommands:
+      create:
+        description: Create a new arena.
+        usage: '/sumo create <arena name>'
+      set:
+        description: Set positions or spawns for an arena.
+        usage: '/sumo set <pos1|pos2|playerspawn1|playerspawn2> <arena name>'
+      delete:
+        description: Delete an existing arena.
+        usage: '/sumo delete <arena name>'
+      join:
+        description: Join the Sumo game queue.
+        usage: '/sumo join'
+      leave:
+        description: Leave the Sumo game queue or arena.
+        usage: '/sumo leave'
+
+permissions:
+  sumo.use:
+    description: Allows the player to use the Sumo commands.
+    default: true
